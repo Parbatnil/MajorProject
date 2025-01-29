@@ -4,6 +4,7 @@ import LandingPage from "./LandingPage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Error404 from "./Error404";
+import ContactUs from "./components/ContactUs";
 const DisplaySetup = () => {
   return (
     <div>
@@ -11,6 +12,7 @@ const DisplaySetup = () => {
         <Navbar />
         <Routes>
           <Route path="*" element={<Error404 />} />
+          <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/" element={<LandingPage />} />
         </Routes>
         <Footer />

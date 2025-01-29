@@ -11,9 +11,8 @@ const LandingPage = () => {
       <HeroSection />
       <CoursesAndExam />
       <TrendCourse />
-      <Feedback/>
-      <div>hello</div>
-      <div>Sourin</div>
+
+      <Feedback />
     </div>
   );
 };
