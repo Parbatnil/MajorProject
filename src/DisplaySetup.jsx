@@ -3,12 +3,14 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LandingPage from "./LandingPage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Error404 from "./Error404";
 const DisplaySetup = () => {
   return (
     <div>
       <Router>
         <Navbar />
         <Routes>
+          <Route path="*" element={<Error404 />} />
           <Route path="/" element={<LandingPage />} />
         </Routes>
         <Footer />
