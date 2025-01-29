@@ -9,6 +9,7 @@ const LandingPage = () => {
     <div>
       <CoursesAndExam />
       <TrendCourse />
+
       <Feedback />
     </div>
   );
