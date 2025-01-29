@@ -80,16 +80,16 @@ const Courses = () => {
   };
 
   return (
-    <div className="flex flex-wrap gap-3 justify-center ">
+    <div className="flex flex-wrap gap-2 justify-center space-y-3 ">
       {courses.map((course, index) => (
         <div
           key={index}
-          className="flex flex-col w-72 border-2 rounded-xl shadow-lg"
+          className="flex flex-col w-80 border-2 rounded-xl shadow-lg"
         >
           <img
             src={course.imageUrl}
             alt={course.name}
-            className={`w-72 ${course.bgColor} p-10`}
+            className={`w-80 rounded-xl ${course.bgColor} p-10`}
           />
           <div className="flex justify-between items-center px-4 pt-2">
             <div className=" flex space-x-2 justify-between items-center">
@@ -113,8 +113,12 @@ const Courses = () => {
           </div>
           <div className="flex p-4 flex-col space-y-6">
             <div className="border-b border-gray-300 pb-5">
-              <h1 className=" text-md md:text-xl font-medium">{course.name}</h1>
-              <p className="text-sm text-gray-500">{course.description}</p>
+              <h1 className=" text-md md:text-xl font-medium  min-h-15">
+                {course.name}
+              </h1>
+              <p className="text-sm text-gray-500">
+                {course.description.slice(0, 100)}...
+              </p>
             </div>
             <button className="bg-yellow-400 py-2 rounded-xl hover:bg-yellow-300">
               View Course

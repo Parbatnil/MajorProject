@@ -35,7 +35,7 @@ const CoursesAndExam = () => {
         </h6>
       </div>
       {/* Horizontal Navigation Bar */}
-      <div className="flex justify-center items-center space-x-6 bg-[#E4EEF7] p-4 rounded-2xl">
+      <div className="flex justify-center items-center space-x-8 bg-[#E4EEF7] p-4 rounded-2xl">
         {["Courses", "Exams"].map((tab) => (
           <button
             key={tab}
