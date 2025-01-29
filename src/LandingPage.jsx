@@ -11,6 +11,7 @@ const LandingPage = () => {
       <TrendCourse />
       <Feedback/>
       <div>hello</div>
+      <div>Sourin</div>
     </div>
   );
 };
