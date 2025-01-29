@@ -2,12 +2,12 @@ import React from "react";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import { CiLinkedin } from "react-icons/ci";
 
-
 const Footer = () => {
-  return <div>
-    <div className="container grid  gap-8 grid-cols-2 sm:grid-cols-12 sm:m-4 sm:ml-28 ml-4">
+  return (
+    <div>
+      <div className="container grid  gap-8 grid-cols-2 sm:grid-cols-12 sm:m-4 sm:ml-28 ml-4">
         <div className="footer-about sm:col-span-3">
-        <h2 className="text-xl font-bold mb-3">Logo </h2>
+          <h2 className="text-xl font-bold mb-3">Logo </h2>
           <p>
             Eduport education theme, built specifically for the education
             centers which is dedicated to teaching and involve learners.
@@ -58,9 +58,9 @@ const Footer = () => {
           <p>Toll free (9:AM to 8:PM IST)</p>
           <p>Email - example@gmail.com</p>
         </div>
-      </div>
-
-  </div>;
+      </div>
+    </div>
+  );
 };
 
 export default Footer;

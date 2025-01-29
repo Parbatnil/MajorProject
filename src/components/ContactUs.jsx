@@ -1,5 +1,6 @@
 import React from "react";
 import image from "/images/contact.webp";
+import bgimg from "../../public/images/ContactusBackground.svg";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
@@ -19,6 +20,27 @@ const ContactUs = () => {
   };
   return (
     <div className="flex my-8 justify-center items-center w-full  flex-col space-y-4 ">
+      <div className="bg-grey-500 border-2  ">
+        <div>
+          <img
+            src={bgimg}
+            alt="image not loaded"
+            className="w-screen relative"
+          />
+        </div>
+        <div className="flex flex-col justify-center items-center absolute top-50 right">
+          <h4>Contact us</h4>
+          <h2>We're here to help</h2>
+          <div>
+            <div className="flex glex-col ">
+              <h3>Customer Support</h3>
+              <h6> Chicago HQ Estica Cop. Macomb, MI 48042</h6>
+              <h5>(423) 733-8222</h5>
+              <h6></h6>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="flex flex-col items-center w-full my-8 space-y-6 ">
         {/* Content Wrapper */}
         <div className="flex flex-col md:flex-row items-center justify-center max-w-[100%] space-x-0 md:space-x-10 ">
