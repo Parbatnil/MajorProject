@@ -30,29 +30,29 @@ const Footer = () => {
         <div className="Company sm:col-span-2">
           <h2 className="text-xl font-bold mb-3">Company </h2>
           <p className="hover:text-blue-600">About us</p>
-          <p>Contact us</p>
-          <p>News and Blogs</p>
-          <p>Library</p>
-          <p>Career</p>
+          <p className="hover:text-blue-600">Contact us</p>
+          <p className="hover:text-blue-600">News and Blogs</p>
+          <p className="hover:text-blue-600">Library</p>
+          <p className="hover:text-blue-600">Career</p>
         </div>
 
         <div className="community sm:col-span-2">
-          <h5>Community</h5>
-          <p>Documentation</p>
-          <p>Faq</p>
-          <p>Forum</p>
-          <p>Sitemap</p>
+          <h5 className="text-xl font-bold mb-3">Community</h5>
+          <p className="hover:text-blue-600">Documentation</p>
+          <p className="hover:text-blue-600">Faq</p>
+          <p className="hover:text-blue-600">Forum</p>
+          <p className="hover:text-blue-600">Sitemap</p>
         </div>
 
         <div className="teaching sm:col-span-2">
-          <h5>Teaching</h5>
-          <p>Become a teacher</p>
-          <p>How to guide</p>
-          <p>Terms & Condition</p>
+          <h5 className="text-xl font-bold mb-3">Teaching</h5>
+          <p className="hover:text-blue-600">Become a teacher</p>
+          <p className="hover:text-blue-600">How to guide</p>
+          <p className="hover:text-blue-600">Terms & Condition</p>
         </div>
 
         <div className="Contact sm:col-span-3">
-          <h5>Contact</h5>
+          <h5 className="text-xl font-bold mb-3">Contact</h5>
           <a href="tel:1234567890">+91 1234567890</a>
           {/* <p>+91 1234567890</p> */}
           <p>Toll free (9:AM to 8:PM IST)</p>
