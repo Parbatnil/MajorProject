@@ -10,6 +10,7 @@ const LandingPage = () => {
       <CoursesAndExam />
       <TrendCourse />
       <Feedback/>
+      <div>hello</div>
     </div>
   );
 };
