@@ -20,27 +20,37 @@ const ContactUs = () => {
   };
   return (
     <div className="flex my-8 justify-center items-center w-full  flex-col space-y-4 ">
-      <div className="bg-grey-500 border-2  ">
+      <div className="bg-grey-500 relative mx-20">
         <div>
-          <img
-            src={bgimg}
-            alt="image not loaded"
-            className="w-screen relative"
-          />
+          <img src={bgimg} alt="image not loaded" className="w-screen" />
         </div>
-        <div className="flex flex-col justify-center items-center absolute top-50 right">
-          <h4>Contact us</h4>
-          <h2>We're here to help</h2>
-          <div>
-            <div className="flex glex-col ">
-              <h3>Customer Support</h3>
-              <h6> Chicago HQ Estica Cop. Macomb, MI 48042</h6>
+
+        <div className="flex flex-col justify-center items-center space-y-3 absolute -top-20  left-0 w-full h-full bg-opacity-50">
+          <h4 className="text-blue-600">Contact us</h4>
+          <h2 className="text-5xl font-bold">We're here to help</h2>
+          <div className="flex gap-10 justify-center items-center my-2">
+            <div className="flex flex-col bg-[#066ac9] rounded-xl space-y-3 text-white p-10 items-center">
+              <h3 className="font-bold text-xl">Customer Support</h3>
+              <h6>Chicago HQ Estica Cop. Macomb, MI 48042</h6>
               <h5>(423) 733-8222</h5>
-              <h6></h6>
+              <h6>example@email.com</h6>
+            </div>
+            <div className="flex flex-col rounded-xl space-y-3 p-10 items-center shadow-lg shadow-gray-300  bg-gray-200">
+              <h3 className="font-bold text-xl">Contact Address</h3>
+              <h6>2492 Centennial NW, Acworth, GA, 30102</h6>
+              <h5>+896-789-546</h5>
+              <h6>example@email.com</h6>
+            </div>
+            <div className="flex flex-col rounded-xl space-y-3 p-10 items-center shadow-lg shadow-gray-300 bg-gray-200">
+              <h3 className="font-bold text-xl">Main Office Address</h3>
+              <h6> 2002 Horton Ford Rd, Eidson, TN, 37731</h6>
+              <h5> (678) 324-1251</h5>
+              <h6>example@email.com</h6>
             </div>
           </div>
         </div>
       </div>
+
       <div className="flex flex-col items-center w-full my-8 space-y-6 ">
         {/* Content Wrapper */}
         <div className="flex flex-col md:flex-row items-center justify-center max-w-[100%] space-x-0 md:space-x-10 ">

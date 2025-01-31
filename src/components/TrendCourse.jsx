@@ -19,7 +19,7 @@ const trendingCourses = [
     image: MCA,
     students: 1600,
     instructor: "Abby Caldarone",
-    bgColor: "bg-blue-500",
+    bgColor: "bg-gradient-to-r from-blue-900 to-blue-600",
   },
   {
     id: 2,
@@ -28,7 +28,7 @@ const trendingCourses = [
     image: BCA,
     students: 1200,
     instructor: "John Smith",
-    bgColor: "bg-green-500",
+    bgColor: "bg-gradient-to-r from-cyan-500 to-blue-400",
   },
   {
     id: 3,
@@ -37,7 +37,7 @@ const trendingCourses = [
     image: WBJECA,
     students: 950,
     instructor: "Emma Watson",
-    bgColor: "bg-blue-500",
+    bgColor: "bg-gradient-to-r from-blue-900 to-cyan-500",
   },
   {
     id: 4,
@@ -46,7 +46,7 @@ const trendingCourses = [
     image: NIMCET,
     students: 1100,
     instructor: "Robert Downey",
-    bgColor: "bg-yellow-500",
+    bgColor: "bg-gradient-to-r from-yellow-700 to-amber-400",
   },
   {
     id: 5,
@@ -55,7 +55,7 @@ const trendingCourses = [
     image: WBJEE,
     students: 1800,
     instructor: "Chris Evans",
-    bgColor: "bg-green-500",
+    bgColor: "bg-gradient-to-r from-green-700 to-lime-400",
   },
 ];
 

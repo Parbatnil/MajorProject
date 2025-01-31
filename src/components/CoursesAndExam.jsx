@@ -10,13 +10,13 @@ const CoursesAndExam = () => {
   const renderContent = () => {
     if (activeTab === "Courses") {
       return (
-        <div className="p-4">
+        <div className="py-4">
           <Courses />
         </div>
       );
     } else if (activeTab === "Exams") {
       return (
-        <div className="p-4">
+        <div className="py-4">
           <Exams />
         </div>
       );
@@ -24,7 +24,7 @@ const CoursesAndExam = () => {
   };
 
   return (
-    <div className="mx-6 md:mx-10 lg:mx-20 my-6 ">
+    <div className="mx-6 md:mx-10 lg:mx-25 my-6 ">
       {/* Title */}
       <div>
         <h1 className="text-4xl md:text-5xl my-2  font-bold text-center">

@@ -5,6 +5,8 @@ import WBJECA from "../../public/images/wbjecalogo.png";
 import WBJEE from "../../public/images/wbjeelogo.png";
 import CAT from "../../public/images/catlogo.png";
 import NIMCET from "../../public/images/nimcetlogo.png";
+import { FiClock } from "react-icons/fi";
+import { NavLink } from "react-router-dom";
 
 const exams = [
   {
@@ -13,7 +15,8 @@ const exams = [
     description:
       "West Bengal Joint Entrance Exam for Computer Applications, essential for MCA admissions in West Bengal.",
     imageUrl: WBJECA,
-    bgColor: "bg-blue-500",
+    bgColor: "bg-gradient-to-r from-blue-900 to-cyan-500",
+    duration: "180 mins",
   },
   {
     name: "WBJEE",
@@ -21,7 +24,8 @@ const exams = [
     description:
       "West Bengal Joint Entrance Examination, an entry gateway to undergraduate engineering courses in West Bengal.",
     imageUrl: WBJEE,
-    bgColor: "bg-green-500",
+    bgColor: "bg-gradient-to-r from-green-700 to-lime-400",
+    duration: "240 mins",
   },
   {
     name: "CAT",
@@ -29,7 +33,8 @@ const exams = [
     description:
       "Common Admission Test, a national-level exam for admissions into prestigious MBA programs in India.",
     imageUrl: CAT,
-    bgColor: "bg-red-500",
+    bgColor: "bg-gradient-to-r from-red-600 to-orange-400",
+    duration: "120 mins",
   },
   {
     name: "NIMCET",
@@ -37,37 +42,39 @@ const exams = [
     description:
       "National Institute of Technology MCA Common Entrance Test, conducted for MCA admissions in NITs across India.",
     imageUrl: NIMCET,
-    bgColor: "bg-yellow-500",
+    bgColor: "bg-gradient-to-r from-yellow-500 to-amber-400",
+    duration: "150 mins",
   },
 ];
 
 const Exams = () => {
-  const [reactions, setReactions] = useState({}); // Track reactions for each exam by index
+  const [reactions, setReactions] = useState({});
 
   const toggleReaction = (index) => {
     setReactions((prev) => ({
       ...prev,
-      [index]: !prev[index], // Toggle the reaction for the clicked exam
+      [index]: !prev[index],
     }));
   };
 
   return (
-    <div className="flex flex-wrap gap-3 justify-center">
+    <div className="flex flex-wrap  gap-10  items-center">
       {exams.map((exam, index) => (
         <div
           key={index}
-          className="flex flex-col w-72 border-2 rounded-xl shadow-lg "
+          className="flex flex-col w-[298.3px] rounded-xl shadow-lg shadow-gray-500/50"
         >
           <img
             src={exam.imageUrl}
             alt={exam.name}
-            className={`w-72 ${exam.bgColor} p-10`}
+            className={`w-[298.3px] rounded-t-lg ${exam.bgColor} opacity-90 p-8 h-[223px]`}
           />
-          <div className="flex justify-between items-center px-4 pt-2 ">
-            <span className="bg-violet-200 text-sm p-2 rounded-md">
-              {exam.code}
-            </span>
-
+          <div className="flex justify-between items-center px-4 pt-2">
+            <div className="flex space-x-2 justify-between items-center">
+              <span className="bg-violet-200 text-violet-600 text-xs px-2 py-1 mt-2 rounded">
+                {exam.code}
+              </span>
+            </div>
             <span
               onClick={() => toggleReaction(index)}
               className="cursor-pointer"
@@ -79,16 +86,23 @@ const Exams = () => {
               )}
             </span>
           </div>
-          <div className="flex p-4 flex-col space-y-6">
-            <div className="border-b border-gray-300 pb-5">
-              <h1 className="text-xl font-medium">{exam.name}</h1>
-              <p className="text-sm text-gray-500">
+          <div className="flex px-4 pt-4 flex-col">
+            <div className="border-gray-300 space-y-4 min-h-[130px] border-b">
+              <NavLink>
+                <h1 className="text-md md:text-xl font-[500] hover:text-blue-900">
+                  {exam.name}
+                </h1>
+              </NavLink>
+              <p className="text-md text-gray-500">
                 {exam.description.slice(0, 100)}...
               </p>
             </div>
-            <button className="bg-yellow-400 py-2 rounded-xl hover:bg-yellow-300 ">
-              View Details
-            </button>
+          </div>
+          <div className="m-4 flex justify-between items-center">
+            <div className="flex items-center space-x-2">
+              <FiClock className="text-red-500 text-md" />
+              <h6>{exam.duration}</h6>
+            </div>
           </div>
         </div>
       ))}
