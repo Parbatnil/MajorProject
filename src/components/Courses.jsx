@@ -9,6 +9,8 @@ import MBA from "../../public/images/leadership-development.png";
 import BBA from "../../public/images/program.png";
 import MTECH from "../../public/images/www.png";
 import BSCDS from "../../public/images/training-program.png";
+import { FiClock } from "react-icons/fi";
+import { NavLink } from "react-router-dom";
 
 const courses = [
   {
@@ -17,31 +19,35 @@ const courses = [
     description:
       "Dive into the world of cutting-edge technology with our comprehensive MCA program. From software engineering.",
     imageUrl: MCA,
-    bgColor: "bg-blue-500",
+    bgColor: "bg-gradient-to-r from-blue-900 to-blue-600",
+    duration: "2 years",
   },
   {
-    name: " Bachelor of Computer Application",
+    name: "Bachelor of Computer Application",
     code: "BCA",
     description:
       "A foundational course that introduces students to the basics of computer applications, programming, and web technologies.",
     imageUrl: BCA,
-    bgColor: "bg-green-500",
+    bgColor: "bg-gradient-to-r from-cyan-500 to-blue-400",
+    duration: "3 years",
   },
   {
-    name: " Bachelor of Technology",
+    name: "Bachelor of Technology",
     code: "BTECH",
     description:
       "An intensive program focused on engineering principles and advanced technical skills to shape future innovators.",
     imageUrl: BTECH,
-    bgColor: "bg-red-500",
+    bgColor: "bg-gradient-to-r from-red-600 to-orange-400",
+    duration: "4 years",
   },
   {
-    name: " Master of Business Administration",
+    name: "Master of Business Administration",
     code: "MBA",
     description:
       "A program designed to cultivate leadership and management skills with a focus on business strategy and innovation.",
     imageUrl: MBA,
-    bgColor: "bg-yellow-500",
+    bgColor: "bg-gradient-to-r from-yellow-500 to-amber-400",
+    duration: "2 years",
   },
   {
     name: "Bachelor of Business Administration",
@@ -49,7 +55,8 @@ const courses = [
     description:
       "An undergraduate program emphasizing business principles, communication, and decision-making skills.",
     imageUrl: BBA,
-    bgColor: "bg-orange-500",
+    bgColor: "bg-gradient-to-r from-orange-500 to-red-400",
+    duration: "3 years",
   },
   {
     name: "Master of Technology",
@@ -57,15 +64,17 @@ const courses = [
     description:
       "An advanced technical program focused on research, innovation, and specialized engineering concepts.",
     imageUrl: MTECH,
-    bgColor: "bg-purple-500",
+    bgColor: "bg-gradient-to-r from-purple-700 to-pink-500",
+    duration: "3 years",
   },
   {
-    name: "Bachelor of Science in Data Science",
-    code: "BSCDS",
+    name: "Bachelor of Science in Cyber Security",
+    code: "BSC-CS",
     description:
-      "A program that equips students with analytical and programming skills to excel in the field of data science.",
+      "A program designed to equip students with skills in ethical hacking, network security, and digital forensics.",
     imageUrl: BSCDS,
-    bgColor: "bg-teal-500",
+    bgColor: "bg-gradient-to-r from-green-700 to-teal-500",
+    duration: "3 years",
   },
 ];
 
@@ -80,24 +89,21 @@ const Courses = () => {
   };
 
   return (
-    <div className="flex flex-wrap gap-3 justify-center ">
+    <div className="flex flex-wrap  gap-10  items-center">
       {courses.map((course, index) => (
         <div
           key={index}
-          className="flex flex-col w-72 border-2 rounded-xl shadow-lg"
+          className="flex flex-col  w-[298.3px] rounded-xl shadow-lg shadow-gray-500/50 "
         >
           <img
             src={course.imageUrl}
             alt={course.name}
-            className={`w-72 ${course.bgColor} p-10`}
+            className={`w-[298.3px] rounded-t-lg   ${course.bgColor} opacity-85 p-8 h-[223px]`}
           />
           <div className="flex justify-between items-center px-4 pt-2">
             <div className=" flex space-x-2 justify-between items-center">
-              <span className="bg-violet-200 text-sm p-2 rounded-md">
+              <span className="bg-violet-200 text-violet-600 text-xs px-2 py-1 mt-2 rounded">
                 {course.code}
-              </span>
-              <span>
-                <RiLiveFill className="text-green-800 text-xl" />
               </span>
             </div>
             <span
@@ -111,14 +117,28 @@ const Courses = () => {
               )}
             </span>
           </div>
-          <div className="flex p-4 flex-col space-y-6">
-            <div className="border-b border-gray-300 pb-5">
-              <h1 className=" text-md md:text-xl font-medium">{course.name}</h1>
-              <p className="text-sm text-gray-500">{course.description}</p>
+          <div className="flex px-4 pt-4 flex-col ">
+            <div className=" border-gray-300  space-y-4 min-h-[170px] border-b ">
+              <NavLink>
+                <h1 className=" text-md md:text-xl font-[500] h-1/3 hover:text-blue-900 ">
+                  {course.name}
+                </h1>
+              </NavLink>
+              <p className="text-md text-gray-500">
+                {course.description.slice(0, 70)}...
+              </p>
             </div>
-            <button className="bg-yellow-400 py-2 rounded-xl hover:bg-yellow-300">
-              View Course
-            </button>
+          </div>
+          <div className="m-4 flex justify-between items-center ">
+            <div className="flex items-center space-x-2">
+              <FiClock className="text-red-500 text-md" />
+              <h6>{course.duration}</h6>
+            </div>
+            <div>
+              <span>
+                <RiLiveFill className="text-md text-green-400" />
+              </span>
+            </div>
           </div>
         </div>
       ))}

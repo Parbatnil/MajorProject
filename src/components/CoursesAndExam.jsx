@@ -10,13 +10,13 @@ const CoursesAndExam = () => {
   const renderContent = () => {
     if (activeTab === "Courses") {
       return (
-        <div className="p-4">
+        <div className="py-4">
           <Courses />
         </div>
       );
     } else if (activeTab === "Exams") {
       return (
-        <div className="p-4">
+        <div className="py-4">
           <Exams />
         </div>
       );
@@ -24,7 +24,7 @@ const CoursesAndExam = () => {
   };
 
   return (
-    <div className="mx-6 md:mx-10 lg:mx-20 my-6 ">
+    <div className="mx-6 md:mx-10 lg:mx-25 my-6 ">
       {/* Title */}
       <div>
         <h1 className="text-4xl md:text-5xl my-2  font-bold text-center">
@@ -35,7 +35,7 @@ const CoursesAndExam = () => {
         </h6>
       </div>
       {/* Horizontal Navigation Bar */}
-      <div className="flex justify-center items-center space-x-6 bg-[#E4EEF7] p-4 rounded-2xl">
+      <div className="flex justify-center items-center space-x-8 bg-[#E4EEF7] p-4 rounded-2xl">
         {["Courses", "Exams"].map((tab) => (
           <button
             key={tab}
