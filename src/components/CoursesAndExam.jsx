@@ -4,6 +4,7 @@ import Exams from "./Exams";
 
 const CoursesAndExam = () => {
   // State to track the active tab
+
   const [activeTab, setActiveTab] = useState("Courses");
 
   // Tab content based on activeTab
