@@ -58,54 +58,56 @@ const Exams = () => {
   };
 
   return (
-    <div className="flex flex-wrap  gap-10  items-center">
-      {exams.map((exam, index) => (
-        <div
-          key={index}
-          className="flex flex-col w-[298.3px] rounded-xl shadow-lg shadow-gray-500/50"
-        >
-          <img
-            src={exam.imageUrl}
-            alt={exam.name}
-            className={`w-[298.3px] rounded-t-lg ${exam.bgColor} opacity-90 p-8 h-[223px]`}
-          />
-          <div className="flex justify-between items-center px-4 pt-2">
-            <div className="flex space-x-2 justify-between items-center">
-              <span className="bg-violet-200 text-violet-600 text-xs px-2 py-1 mt-2 rounded">
-                {exam.code}
+    <div className="flex justify-center  items-center">
+      <div className="flex flex-wrap  gap-2 md:gap-6 lg:gap-8   items-center justify-center">
+        {exams.map((exam, index) => (
+          <div
+            key={index}
+            className="flex flex-col  w-72  rounded-xl shadow-lg shadow-gray-300"
+          >
+            <img
+              src={exam.imageUrl}
+              alt={exam.name}
+              className={`w-72  rounded-t-lg ${exam.bgColor} opacity-90 p-8 h-[223px]`}
+            />
+            <div className="flex justify-between items-center px-4 pt-2">
+              <div className="flex space-x-2 justify-between items-center">
+                <span className="bg-violet-200 text-violet-600 text-xs px-2 py-1 mt-2 rounded">
+                  {exam.code}
+                </span>
+              </div>
+              <span
+                onClick={() => toggleReaction(index)}
+                className="cursor-pointer"
+              >
+                {reactions[index] ? (
+                  <FaHeart className="text-red-500" />
+                ) : (
+                  <CiHeart className="text-gray-500" />
+                )}
               </span>
             </div>
-            <span
-              onClick={() => toggleReaction(index)}
-              className="cursor-pointer"
-            >
-              {reactions[index] ? (
-                <FaHeart className="text-red-500" />
-              ) : (
-                <CiHeart className="text-gray-500" />
-              )}
-            </span>
-          </div>
-          <div className="flex px-4 pt-4 flex-col">
-            <div className="border-gray-300 space-y-4 min-h-[130px] border-b">
-              <NavLink>
-                <h1 className="text-md md:text-xl font-[500] hover:text-blue-900">
-                  {exam.name}
-                </h1>
-              </NavLink>
-              <p className="text-md text-gray-500">
-                {exam.description.slice(0, 100)}...
-              </p>
+            <div className="flex px-4 pt-4 flex-col">
+              <div className="border-gray-300 space-y-4 min-h-[130px] border-b">
+                <NavLink>
+                  <h1 className="text-md md:text-xl font-[500] hover:text-blue-900">
+                    {exam.name}
+                  </h1>
+                </NavLink>
+                <p className="text-md text-gray-500">
+                  {exam.description.slice(0, 100)}...
+                </p>
+              </div>
+            </div>
+            <div className="m-4 flex justify-between items-center">
+              <div className="flex items-center space-x-2">
+                <FiClock className="text-red-500 text-md" />
+                <h6>{exam.duration}</h6>
+              </div>
             </div>
           </div>
-          <div className="m-4 flex justify-between items-center">
-            <div className="flex items-center space-x-2">
-              <FiClock className="text-red-500 text-md" />
-              <h6>{exam.duration}</h6>
-            </div>
-          </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };

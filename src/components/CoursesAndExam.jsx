@@ -25,7 +25,7 @@ const CoursesAndExam = () => {
   };
 
   return (
-    <div className="mx-6 md:mx-10 lg:mx-25 my-6 ">
+    <div className="mx-6 md:mx-10 lg:mx-16 my-6 ">
       {/* Title */}
       <div>
         <h1 className="text-4xl md:text-5xl my-2  font-bold text-center">

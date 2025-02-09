@@ -89,59 +89,61 @@ const Courses = () => {
   };
 
   return (
-    <div className="flex flex-wrap  gap-10  items-center">
-      {courses.map((course, index) => (
-        <div
-          key={index}
-          className="flex flex-col  w-[298.3px] rounded-xl shadow-lg shadow-gra"
-        >
-          <img
-            src={course.imageUrl}
-            alt={course.name}
-            className={`w-[298.3px] rounded-t-lg   ${course.bgColor} opacity-85 p-8 h-[223px]`}
-          />
-          <div className="flex justify-between items-center px-4 pt-2">
-            <div className=" flex space-x-2 justify-between items-center">
-              <span className="bg-violet-200 text-violet-600 text-xs px-2 py-1 mt-2 rounded">
-                {course.code}
+    <div className="flex justify-center  items-center ">
+      <div className="flex flex-wrap  gap-2 md:gap-6 lg:gap-8   items-center justify-center ">
+        {courses.map((course, index) => (
+          <div
+            key={index}
+            className="flex flex-col  w-72  rounded-xl shadow-lg shadow-gray-300"
+          >
+            <img
+              src={course.imageUrl}
+              alt={course.name}
+              className={`w-72 rounded-t-lg   ${course.bgColor} opacity-85 p-8  h-55`}
+            />
+            <div className="flex justify-between items-center px-4 pt-2">
+              <div className=" flex space-x-2 justify-between items-center">
+                <span className="bg-violet-200 text-violet-600 text-xs px-2 py-1 mt-2 rounded">
+                  {course.code}
+                </span>
+              </div>
+              <span
+                onClick={() => toggleReaction(index)}
+                className="cursor-pointer"
+              >
+                {reactions[index] ? (
+                  <FaHeart className="text-red-500" />
+                ) : (
+                  <CiHeart className="text-gray-500" />
+                )}
               </span>
             </div>
-            <span
-              onClick={() => toggleReaction(index)}
-              className="cursor-pointer"
-            >
-              {reactions[index] ? (
-                <FaHeart className="text-red-500" />
-              ) : (
-                <CiHeart className="text-gray-500" />
-              )}
-            </span>
-          </div>
-          <div className="flex px-4 pt-4 flex-col ">
-            <div className=" border-gray-300  space-y-4 min-h-[170px] border-b ">
-              <NavLink>
-                <h1 className=" text-md md:text-xl font-[500] h-1/3 hover:text-blue-900 ">
-                  {course.name}
-                </h1>
-              </NavLink>
-              <p className="text-md text-gray-500">
-                {course.description.slice(0, 70)}...
-              </p>
+            <div className="flex px-4 pt-4 flex-col ">
+              <div className=" border-gray-300  space-y-4 min-h-[170px] border-b ">
+                <NavLink>
+                  <h1 className=" text-md md:text-xl font-[500] h-1/3 hover:text-blue-900 ">
+                    {course.name}
+                  </h1>
+                </NavLink>
+                <p className="text-md text-gray-500">
+                  {course.description.slice(0, 70)}...
+                </p>
+              </div>
+            </div>
+            <div className="m-4 flex justify-between items-center ">
+              <div className="flex items-center space-x-2">
+                <FiClock className="text-red-500 text-md" />
+                <h6>{course.duration}</h6>
+              </div>
+              <div>
+                <span>
+                  <RiLiveFill className="text-md text-green-400" />
+                </span>
+              </div>
             </div>
           </div>
-          <div className="m-4 flex justify-between items-center ">
-            <div className="flex items-center space-x-2">
-              <FiClock className="text-red-500 text-md" />
-              <h6>{course.duration}</h6>
-            </div>
-            <div>
-              <span>
-                <RiLiveFill className="text-md text-green-400" />
-              </span>
-            </div>
-          </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };

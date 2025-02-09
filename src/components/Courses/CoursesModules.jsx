@@ -61,7 +61,7 @@ const CoursesModules = () => {
       {/* _____________________________________________________________________________ */}
       {/* Tab section */}
       {/* _____________________________________________________________________________ */}
-      <div className="h-screen w-screen relative">
+      <div className="h-screen   relative">
         <div className="mx-2 bg-white md:mx-28 rounded-md shadow-xl flex flex-col gap-4 flex-wrap border absolute -top-20 md:w-[85%] md:-top-15 z-10 ">
           <div className="border-b-2 border-slate-300">
             {tabSection.map((tab) => (

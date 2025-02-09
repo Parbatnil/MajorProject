@@ -17,15 +17,15 @@ const Navbar = () => {
 
   return (
     <div className="sticky top-0 z-100 bg-white ">
-      <div className="relative py-5 md:p-5">
+      <div className="relative py-5 lg:p-5">
         {/* desktop view */}
-        <div className="flex justify-between mx-4 items-center">
+        <div className="flex justify-between mx-2 items-center">
           <div>
             <img src={logo} alt="" className="w-34" />
           </div>
 
           <div className="hidden  md:flex ">
-            <ul className=" hidden  md:flex space-x-6  ">
+            <ul className=" hidden  md:flex space-x-3  ">
               <li className="hover:text-blue-500">
                 <NavLink to="/">Home</NavLink>
               </li>
@@ -63,24 +63,24 @@ const Navbar = () => {
             <input
               type="text"
               placeholder="Search"
-              className="pl-2 pr-3 py-2 border rounded w-64  outline-blue-500"
+              className="pl-2 pr-3 py-2 border rounded md:w-52 lg:w-64  outline-blue-500"
             />
-            <IoIosSearch className="absolute right-16 top-3 text-gray-500 text-xl hover:text-blue-500" />
+            <IoIosSearch className="absolute right-10 top-3 text-gray-500 text-xl hover:text-blue-500" />
             <div>
-              <FaUserCircle className="text-5xl text-blue-600" />
+              <FaUserCircle className="text-3xl text-blue-600" />
             </div>
           </div>
           {/* toggle menu */}
 
-          <div className="ml-14 md:hidden">
+          <div className=" flex items-center space-x-4 md:hidden">
             {toggle ? (
               <GiHamburgerMenu className="text-2xl" onClick={changeToggle} />
             ) : (
               <IoClose className="text-2xl" onClick={changeToggle} />
             )}
-          </div>
-          <div className="md:hidden">
-            <FaUserCircle className="text-3xl text-blue-600" />
+            <div className="">
+              <FaUserCircle className="text-3xl text-blue-600" />
+            </div>
           </div>
         </div>
 
@@ -128,7 +128,7 @@ const Navbar = () => {
               <input
                 type="text"
                 placeholder="Search"
-                className="pl-2 pr-3 py-2 border rounded w-64  outline-blue-500"
+                className="pl-2 pr-3 py-2 border rounded w-48  outline-blue-500"
               />
               <IoIosSearch className="absolute right-2 top-2 text-gray-500 text-xl hover:text-blue-500" />
             </div>

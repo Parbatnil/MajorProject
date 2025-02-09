@@ -145,7 +145,7 @@ const TrendCourse = () => {
         {trendingCourses.map((course) => (
           <div
             key={course.id} // Unique key for each course item
-            className="p-4 flex flex-col items-center border rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 group"
+            className="h-122 p-4 flex flex-col items-center border rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 group"
           >
             {/* Course image */}
             <img
@@ -159,9 +159,9 @@ const TrendCourse = () => {
                 {course.tag}
               </span>
               {/* Course name */}
-              <p className="font-bold text-md md:text-lg mt-4 text-gray-700">
+              <h1 className="font-bold text-md md:text-lg mt-4 text-gray-700  h-15">
                 {course.name}
-              </p>
+              </h1>
               {/* Number of students */}
               <span className="text-gray-500 text-sm block mt-2 mb-4">
                 {course.students} Students
