@@ -1,6 +1,6 @@
 import React from "react";
 import image from "/images/contact.webp";
-import bgimg from "../../public/images/ContactusBackground.svg";
+import bgimg from "/images/ContactusBackground.svg";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { IoLogoPinterest } from "react-icons/io";
 import { FaSquareXTwitter } from "react-icons/fa6";
@@ -18,54 +18,55 @@ const ContactUs = () => {
     e.target.submit(data);
   };
 
+  const items = [
+    {
+      title: "Customer Support",
+      address: "Chicago HQ Estica Cop. Macomb, MI 48042",
+      phone: "(423) 733-8222",
+      email: "example@email.com",
+      bg: "bg-blue-600 text-white",
+    },
+    {
+      title: "Contact Address",
+      address: "2492 Centennial NW, Acworth, GA, 30102",
+      phone: "+896-789-546",
+      email: "example@email.com",
+      bg: "bg-gray-200 shadow-md",
+    },
+    {
+      title: "Main Office Address",
+      address: "2002 Horton Ford Rd, Eidson, TN, 37731",
+      phone: "(678) 324-1251",
+      email: "example@email.com",
+      bg: "bg-gray-200 shadow-md",
+    },
+  ];
   return (
-    <div className="flex flex-col my-8 justify-center items-center w-full space-y-8 px-4 md:px-10 lg:px-20">
+    <div className="flex flex-col my-8 justify-center items-center w-full space-y-8 px-4 md:px-10 lg:px-20 max-w-screen">
       {/* Banner Section */}
-      <div className="relative w-full max-w-screen-lg mx-auto">
-        <img src={bgimg} alt="image not loaded" className="w-full" />
-        <div className="absolute inset-0 bg-white bg-opacity-50 flex flex-col justify-center items-center space-y-3 text-center px-4">
-          <h4 className="text-blue-600 text-lg md:text-xl">Contact us</h4>
-          <h2 className="text-3xl md:text-5xl font-bold">We're here to help</h2>
-          <div className="flex flex-wrap justify-center gap-6 mt-6 w-full">
-            {[
-              {
-                title: "Customer Support",
-                address: "Chicago HQ Estica Cop. Macomb, MI 48042",
-                phone: "(423) 733-8222",
-                email: "example@email.com",
-                bg: "bg-blue-600 text-white",
-              },
-              {
-                title: "Contact Address",
-                address: "2492 Centennial NW, Acworth, GA, 30102",
-                phone: "+896-789-546",
-                email: "example@email.com",
-                bg: "bg-gray-200 shadow-md",
-              },
-              {
-                title: "Main Office Address",
-                address: "2002 Horton Ford Rd, Eidson, TN, 37731",
-                phone: "(678) 324-1251",
-                email: "example@email.com",
-                bg: "bg-gray-200 shadow-md",
-              },
-            ].map((info, index) => (
-              <div
-                key={index}
-                className={`relative flex flex-col rounded-xl p-8 items-center w-full md:w-[320px] min-h-[250px] ${info.bg} bg-cover bg-center z-10`}
-                style={{
-                  backgroundImage: `url(${bgimg})`,
-                  backgroundBlendMode: "overlay",
-                }}
-              >
-                <h3 className="font-bold text-lg md:text-xl">{info.title}</h3>
-                <h6 className="text-center text-sm md:text-base">
-                  {info.address}
-                </h6>
-                <h5 className="font-medium">{info.phone}</h5>
-                <h6>{info.email}</h6>
-              </div>
-            ))}
+      {/* <div>
+        <div className=" relative ">
+          <img src={bgimg} alt="" className=" md:w-[90rem] " />
+          <div className="absolute  my-10 top-10 md:right-96 md:mr-29  ">
+            <h1 className="text-blue-500 md:text-md font-bold text-center ">
+              Contact Us
+            </h1>
+            <h3 className="text-2xl md:text-5xl font-bold text-center ">
+              We're here to help!
+            </h3>
+          </div>
+        </div>
+      </div> */}
+      <div>
+        <div className="relative">
+          <img src={bgimg} alt="Background" className="w-[90rem] mx-20" />
+          <div className="absolute top-10 left-1/2 transform -translate-x-1/2 md:top-20">
+            <h1 className="text-blue-500 text-lg md:text-xl font-bold text-center">
+              Contact Us
+            </h1>
+            <h3 className="text-2xl md:text-5xl font-bold text-center">
+              We're here to help!
+            </h3>
           </div>
         </div>
       </div>

@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Error404 from "./Error404";
 import ContactUs from "./components/ContactUs";
+import CoursesModules from "./components/Courses/CoursesModules";
 const DisplaySetup = () => {
   return (
     <div>
@@ -14,6 +15,7 @@ const DisplaySetup = () => {
           <Route path="*" element={<Error404 />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/" element={<LandingPage />} />
+          <Route path="/courseModules" element={<CoursesModules />} />
         </Routes>
         <Footer />
       </Router>

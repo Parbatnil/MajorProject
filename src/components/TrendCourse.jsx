@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import MCA from "../../public/images/artificial-intelligence.png";
-import BCA from "../../public/images/computer-science.png";
+import MCA from "/images/artificial-intelligence.png";
+import BCA from "/images/computer-science.png";
 import { FaUserSecret } from "react-icons/fa";
-import WBJECA from "../../public/images/wbjecalogo.png";
-import WBJEE from "../../public/images/wbjeelogo.png";
-import NIMCET from "../../public/images/nimcetlogo.png";
+import WBJECA from "/images/wbjecalogo.png";
+import WBJEE from "/images/wbjeelogo.png";
+import NIMCET from "/images/nimcetlogo.png";
 import { FaChevronCircleLeft, FaChevronCircleRight } from "react-icons/fa";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";

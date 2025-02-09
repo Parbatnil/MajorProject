@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { CiHeart } from "react-icons/ci";
 import { FaHeart } from "react-icons/fa";
-import WBJECA from "../../public/images/wbjecalogo.png";
-import WBJEE from "../../public/images/wbjeelogo.png";
-import CAT from "../../public/images/catlogo.png";
-import NIMCET from "../../public/images/nimcetlogo.png";
+import WBJECA from "/images/wbjecalogo.png";
+import WBJEE from "/images/wbjeelogo.png";
+import CAT from "/images/catlogo.png";
+import NIMCET from "/images/nimcetlogo.png";
 import { FiClock } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
 

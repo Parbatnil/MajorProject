@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { CiHeart } from "react-icons/ci";
 import { FaHeart } from "react-icons/fa";
 import { RiLiveFill } from "react-icons/ri";
-import MCA from "../../public/images/artificial-intelligence.png";
-import BCA from "../../public/images/computer-science.png";
-import BTECH from "../../public/images/data-science.png";
-import MBA from "../../public/images/leadership-development.png";
-import BBA from "../../public/images/program.png";
-import MTECH from "../../public/images/www.png";
-import BSCDS from "../../public/images/training-program.png";
+import MCA from "/images/artificial-intelligence.png";
+import BCA from "/images/computer-science.png";
+import BTECH from "/images/data-science.png";
+import MBA from "/images/leadership-development.png";
+import BBA from "/images/program.png";
+import MTECH from "/images/www.png";
+import BSCDS from "/images/training-program.png";
 import { FiClock } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
 
@@ -93,7 +93,7 @@ const Courses = () => {
       {courses.map((course, index) => (
         <div
           key={index}
-          className="flex flex-col  w-[298.3px] rounded-xl shadow-lg shadow-gray-500/50 "
+          className="flex flex-col  w-[298.3px] rounded-xl shadow-lg shadow-gra"
         >
           <img
             src={course.imageUrl}
